@@ -4,6 +4,8 @@
 
 EchoCare listens to what an older adult says about how they feel, and spots **prescribing cascades**: when a side effect of one medicine is treated with another medicine. It turns them into a clear question for the doctor, never an instruction to stop a medicine.
 
+**Live demo:** https://echocare-dsh-hacks-v2.pages.dev
+
 Full version (claude.ai): https://claude.ai/artifact/HetAvtkABAhgHGxS1CwZeu
 
 ## The problem
