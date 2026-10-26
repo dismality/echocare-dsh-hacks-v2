@@ -128,8 +128,8 @@ function eMeds(){
   <p style="margin:0;font-size:18px;color:var(--e-sub)">Pain tablets and other "when needed" medicines are not shown here. Ask ${esc(famName())} or your pharmacist if you are not sure.</p>`;
 }
 const ENODES={
- start:[['good','I feel good','smile'],['notgood','Not so good','sad'],['took','I took my medicine','check'],['speak','Speak to EchoCare','mic','wide'],['type','Type something else','pencil','wide']],
- more:[['took','I took my medicine','check'],['notgood','I feel unwell','sad'],['bye','That\'s all, thank you','done'],['speak','Speak to EchoCare','mic','wide'],['type','Type something else','pencil','wide']],
+ start:[['good','I feel good','smile'],['notgood','Not so good','sad'],['speak','Speak to EchoCare','mic','wide'],['type','Type something else','pencil','wide']],
+ more:[['notgood','I feel unwell','sad'],['bye','That\'s all, thank you','done'],['speak','Speak to EchoCare','mic','wide'],['type','Type something else','pencil','wide']],
  sleep:[['slept_well','I slept well','smile'],['slept_bad','I slept badly','tired']],
  where:[['faint','I feel faint','alert','danger wide'],['b_head','My head','head'],['b_chest','My chest','chest'],['b_stomach','My stomach','stomach'],['b_legs','Legs or feet','legs'],['b_toilet','Toilet trouble','toilet'],['b_tired','Tired or weak','tired'],['b_low','Lonely or feeling low','cloud','wide']],
  b_head:[['s_dizzy','Dizzy','head'],['s_headache','Headache','head'],['s_confusion','Forgetful or muddled','cloud']],
