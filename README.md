@@ -4,7 +4,7 @@
 
 EchoCare listens to what an older adult says about how they feel, and spots **prescribing cascades**: when a side effect of one medicine is treated with another medicine. It turns them into a clear question for the doctor, never an instruction to stop a medicine.
 
-Live app: https://claude.ai/artifact/HetAvtkABAhgHGxS1CwZeu
+Full version (claude.ai): https://claude.ai/artifact/HetAvtkABAhgHGxS1CwZeu
 
 ## The problem
 
@@ -45,16 +45,28 @@ Mdm Tan (an example patient) is 78 and takes seven medicines from three places: 
 
 ## Running it
 
-- **Full version:** open the live app link above in claude.ai. Claude, saving and the care circle need a signed-in claude.ai account.
-- **Offline demo:** open `index.html` in a browser. It runs on the built-in rules with the example patient. Nothing is saved.
+- **Demo website:** runs on the built-in rules with the example patient, including voice input. Nothing is saved, and features that need Claude say so.
+- **Full version:** open the claude.ai link above. Claude, saving and the care circle need a signed-in claude.ai account.
+- **On your computer:** serve the folder (for example `python -m http.server`) and open `http://localhost:8000`.
 - **Guided demo:** add `#demo` to the address, or press **Play demo**.
 
 ## Project structure
 
+No framework and no build step for the website: plain HTML, CSS and JavaScript files, loaded in order.
+
 | Path | What it is |
 |---|---|
-| `index.html` | The whole app: HTML, CSS and JavaScript in one file, no build step |
+| `index.html` | Page skeleton: loads the stylesheets and scripts below |
+| `css/base.css` | Colours (light and dark), layout, navigation, overlays |
+| `css/elder.css` | Her app: one task per screen, very large type |
+| `css/guardian.css` | Family view, forms, doctor memo, charts, guided demo |
+| `js/data/` | Utilities, medicine and symptom dictionaries, the 25 cascade rules, translations, openFDA snapshot, example patient |
+| `js/engine/` | Cascade detection and interactions, conversation parsing and safety replies, Claude calls, built-in engine and language checks |
+| `js/app/` | State and saving, care circle, page rendering, Today, forms, care pages, doctor memo and PDF, pharmacist view, her app |
+| `js/demo.js` | Guided demo |
+| `js/main.js` | Click, change and submit handling, and start-up |
 | `audio/` | Pre-recorded narration for the guided demo (ElevenLabs) |
+| `tools/bundle.py` | Builds `dist/echocare-claude.html`, the single-file version for claude.ai, from the same files |
 | `tools/make_voices.py` | Script that generated the narration. It reads the API key at run time and never stores it |
 | `docs/demo-script.md` | Slide-by-slide demo script and recording steps |
 
