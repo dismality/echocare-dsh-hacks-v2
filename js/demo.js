@@ -2,9 +2,9 @@
    A scripted 3-minute story on a fresh copy of the example patient. It never calls the AI (so it cannot stall on stage),
    never saves, and puts the viewer's own data back on exit. Arrow keys and presentation clickers move between steps. */
 const DEMO={on:false,i:0,saved:null,auto:null,voice:true};
-/* ElevenLabs narration, generated ahead of time and published beside the page (no API key in the page).
-   Step 3 also plays EchoCare's reply to Mdm Tan in a second voice. Falls back to the browser voice if a file will not play. */
-const DEMO_AUDIO=i=>i===2?['audio/demo-3.mp3','audio/demo-3-reply.mp3']:['audio/demo-'+(i+1)+'.mp3'];
+/* Narration uses the browser voice. To play recorded narration instead, list audio files per step here,
+   e.g. i=>['audio/demo-'+(i+1)+'.mp3']; the browser voice still takes over if a file will not play. */
+const DEMO_AUDIO=i=>[];
 let demoAudio=null,demoQueueId=0;
 function demoVoiceStop(){demoQueueId++;if(demoAudio){demoAudio.onended=demoAudio.onerror=null;demoAudio.pause();demoAudio=null}try{speechSynthesis.cancel()}catch(e){}}
 function demoVoice(i,done){
@@ -12,7 +12,7 @@ function demoVoice(i,done){
   const fallback=()=>{if(id!==demoQueueId)return;speak(s.t+'. '+stepText(s),true);done&&setTimeout(()=>id===demoQueueId&&done(),Math.max(6000,stepText(s).length*65))};
   const playAt=k=>{if(id!==demoQueueId)return;if(k>=files.length){done&&setTimeout(()=>id===demoQueueId&&done(),1500);return}
     const a=new Audio(files[k]);demoAudio=a;a.onended=()=>playAt(k+1);a.onerror=()=>{k===0?fallback():playAt(k+1)};a.play().catch(()=>{if(k===0)fallback()})};
-  playAt(0);
+  if(files.length)playAt(0);else fallback();
 }
 const DEMO_LINE='My ankles are swollen again, my shoes feel tight.';
 const focusEl=sel=>()=>typeof sel==='function'?sel():document.querySelector(sel);

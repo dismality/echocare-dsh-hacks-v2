@@ -69,17 +69,14 @@ No framework and no build step for the website: plain HTML, CSS and JavaScript f
 | `js/app/` | State and saving, care circle, page rendering, Today, forms, care pages, doctor memo and PDF, pharmacist view, her app |
 | `js/demo.js` | Guided demo |
 | `js/main.js` | Click, change and submit handling, and start-up |
-| `audio/` | Pre-recorded narration for the guided demo (ElevenLabs) |
 | `tools/bundle.py` | Builds `dist/echocare-claude.html`, the single-file version for claude.ai, from the same files |
 | `tools/make_voices.py` | Script that generated the narration. It reads the API key at run time and never stores it |
-| `docs/demo-script.md` | Slide-by-slide demo script and recording steps |
 
 ## Built with
 
 - HTML, CSS and JavaScript, with no framework.
 - **Claude** (Anthropic): conversation understanding, medicine photo identification and plain-language explanations, through the claude.ai artifact runtime.
 - **openFDA**: adverse-event data snapshot.
-- **ElevenLabs**: demo narration.
 - **jsPDF**: the doctor memo PDF.
 - Built by David Wong, with Claude Code as a coding assistant.
 
