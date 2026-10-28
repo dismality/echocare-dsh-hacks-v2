@@ -5,9 +5,9 @@
 ---
 
 ## 1. Meet Mdm Tan (about 16 s)
-Meet Mdm Tan. She's 78, and she lives alone in a flat in Singapore.
+Meet Mdm Tan. She's 78, and she lives alone.
 Her daughter Rachel lives across town, and visits twice a week.
-Mdm Tan is an example patient. But her story is a very common one.
+Mdm Tan is an example patient. But her story plays out everywhere people grow old alone, from London to Chicago to Chennai.
 
 ## 2. Seven medicines, three sources (about 18 s)
 Every day, she takes seven medicines, from three different places.
@@ -36,10 +36,11 @@ Rachel sees her mum, but not the timeline of when each symptom started.
 And Mdm Tan only knows that she feels worse.
 The clues are there, in what she says between visits. Nobody is listening for them.
 
-## 6. A growing problem in Singapore (about 22 s)
-And this problem is growing.
-About 87,000 seniors in Singapore live alone. That's double the number ten years ago.
-By 2030, one in four Singapore citizens will be 65 or older.
+## 6. A growing problem, worldwide (about 26 s)
+And this problem is growing, in every country.
+By 2030, one in six people in the world will be 60 or older.
+Worldwide, one in five older women lives alone. In the UK and France, it's about one in three older people.
+About four in ten older adults take five or more medicines.
 And around one in five older adults in hospital has a reaction to a medicine. Most of those reactions are predictable.
 Predictable means preventable, if someone spots the pattern in time.
 
@@ -217,7 +218,7 @@ A rule engine and FDA data do the safety checks, and a live database keeps the w
 ## 28. Limits and next steps (about 22 s)
 It has real limits. EchoCare isn't a medical device yet, and every rule still needs a pharmacist's review.
 Alerts only reach phones that have EchoCare open, and the translations need checking by native speakers.
-Next, we want to pilot it with a polyclinic or pharmacy, and add push alerts and phone-call check-ins for people without a smartphone.
+Next, we want to pilot it with a clinic or pharmacy, and add push alerts and phone-call check-ins for people without a smartphone.
 
 ## 29. Stop the third prescription (about 16 s)
 EchoCare turns an older adult's everyday words...

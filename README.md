@@ -10,6 +10,8 @@ Full version (claude.ai): https://claude.ai/artifact/HetAvtkABAhgHGxS1CwZeu
 
 ## The problem
 
+By 2030, 1 in 6 people in the world will be 60 or older ([WHO](https://www.who.int/news-room/fact-sheets/detail/ageing-and-health)). About 4 in 10 older adults take five or more medicines ([2024 meta-analysis](https://pubmed.ncbi.nlm.nih.gov/39135518/)), and worldwide 1 in 5 older women lives alone ([UN DESA](https://www.un.org/development/desa/pd/sites/www.un.org.development.desa.pd/files/desa-pd-technicalpaper-living_arrangements_of_older_persons_2019.pdf)). EchoCare is for older adults like them, in any country, and for the family, GPs and pharmacists around them. Singapore is the first pilot market.
+
 Mdm Tan (an example patient) is 78 and takes seven medicines from three places: her GP, a memory clinic, and a neighbour. Ibuprofen from the neighbour can raise blood pressure, so she is started on amlodipine. Amlodipine commonly swells the ankles, and the usual next step is a water pill. Each new pill treats the last one's side effect, and nobody sees the whole picture.
 
 ## Key features
