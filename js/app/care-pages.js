@@ -145,7 +145,7 @@ function vTrustBody(){
     <li>FDA data is built into the page, so no medicine names leave it for those lookups.</li>
     <li>Planned: compliance with Singapore's PDPA, encrypted storage, and a nominated decision-maker if her memory declines.</li></ul></div>
    <div class="card"><h2>Known gaps and next steps</h2><div class="tbl"><table class="t"><tbody>
-    ${row('Real-world accuracy','Pharmacist-reviewed rules, then a pilot with a polyclinic or pharmacy')}
+    ${row('Real-world accuracy','Pharmacist-reviewed rules, then a pilot with a clinic or pharmacy')}
     ${row('Local drug safety data','Add HSA adverse-event data alongside openFDA')}
     ${row('Health records','NEHR is not open to apps. Today: compare with her HealthHub list. Next: an approved integration so her records arrive by themselves')}
     ${row('Alerts when EchoCare is closed','Family devices with EchoCare open get an alarm now, with a one-tap call button. Push notifications to a locked phone need the installed app')}

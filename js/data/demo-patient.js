@@ -49,7 +49,7 @@ function seed(){
     family:{contacts:[{id:uid(),name:'Rachel Tan',relation:'Daughter',phone:'+65 9123 4567',notify:'Urgent alerts and weekly digest'},{id:uid(),name:'Dr Lim',relation:'GP',phone:'+65 6345 0000',notify:'Doctor sheet before visits'}],
       share:{meds:true,symptoms:true,vitals:true,mood:true,chat:false},
       feed:[]},
-    appts:[{id:uid(),date:addDays(-26),time:'09:30',with:'Dr Lim (GP)',place:'Polyclinic, Room 12',purpose:'Blood pressure was high. Amlodipine started.'},{id:uid(),date:addDays(6),time:'10:30',with:'Dr Lim (GP)',place:'Polyclinic, Room 12',purpose:'3-month review: blood pressure and diabetes'},{id:uid(),date:addDays(34),time:'14:00',with:'Memory clinic',place:'General Hospital, Clinic B',purpose:'Memory follow-up'}],
+    appts:[{id:uid(),date:addDays(-26),time:'09:30',with:'Dr Lim (GP)',place:'Clinic, Room 12',purpose:'Blood pressure was high. Amlodipine started.'},{id:uid(),date:addDays(6),time:'10:30',with:'Dr Lim (GP)',place:'Clinic, Room 12',purpose:'3-month review: blood pressure and diabetes'},{id:uid(),date:addDays(34),time:'14:00',with:'Memory clinic',place:'General Hospital, Clinic B',purpose:'Memory follow-up'}],
     chat:[{who:'bot',text:'Good morning, Mdm Tan! How did you sleep, and how are you feeling today?',ts:'08:00'}],
     events:[],supervision:{[addDays(-1)]:{by:['Rachel Tan'],at:'19:00'},[addDays(-3)]:{by:['Rachel Tan'],at:'18:30'}},prnQty:{}
   };
