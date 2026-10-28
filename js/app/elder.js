@@ -31,6 +31,9 @@ function checkReminders(){
   if(slot)showReminder(slot,false);
 }
 function tick(){
+  // "today" (T) is fixed when the page loads, so a page left open overnight starts the new day by reloading
+  // (not while a form is open or a save is running, so nothing typed or saved is lost)
+  if(iso(new Date())!==T){if(!DEMO.on&&!window.__sheet&&!writing&&!pendingWrite)location.reload();return}
   if([...document.querySelectorAll('[data-unlock]')].some(el=>minsOf(el.dataset.unlock)<=nowMins())){if(APP==='elder')renderElder();else render()}
   document.querySelectorAll('[data-cd]').forEach(el=>{const c=cdInfo(el.dataset.cd,el.dataset.st);el.className=(el.dataset.big?'cdbig ':'cd ')+c.cls;el.textContent=c.txt});
   document.querySelectorAll('[data-ecd]').forEach(el=>{const w=eWhen(el.dataset.ecd,el.dataset.st);el.className='e-when '+w.c;el.textContent=w.t});
