@@ -94,6 +94,7 @@ function digest(){
 function vGuardian(){
   const f=state.family;
   return head('Guardian',`The people who look after ${esc(state.patient.short)}. They get alerts and can be recorded as supervising her.`,`<button class="btn primary" data-sheet="contact">Add person</button>`)+
+  (typeof uiLangCard==='function'?uiLangCard():'')+
   `<div style="margin-bottom:16px">${circleCard()}</div>`+
   `<div class="list grid2">${f.contacts.map(c=>`<div class="rec"><div class="rec-top"><b>${esc(c.name)}</b><span class="chip plain">${esc(c.relation)}</span></div><div class="meta"><span class="mono" style="user-select:all">${esc(c.phone)}</span><span>${esc(c.notify)}</span></div><div class="actions">${c.phone?`<a class="btn sm" href="${esc(telHref(c.phone))}">Call</a>`:''}<button class="btn sm danger" data-act="con-del" data-id="${c.id}">${window.__del===c.id?'Tap again to remove':'Remove'}</button></div></div>`).join('')||'<div class="empty">No one added yet.</div>'}</div>`;
 }
